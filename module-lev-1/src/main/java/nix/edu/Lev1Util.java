@@ -24,4 +24,24 @@ public class Lev1Util {
         else System.out.println("It's impossible to make move");
     }
 
+    public void findTriangleSquare(double point1X, double point2X, double point3X, double point1Y, double point2Y, double point3Y){
+        double triangleSide1 = Math.sqrt((point1X - point2X) * (point1X - point2X)
+                + (point1Y - point2Y) * (point1Y - point2Y));
+        double triangleSide2 = Math.sqrt((point1X - point3X) * (point1X - point3X)
+                + (point1Y - point3Y) * (point1Y - point3Y));
+        double triangleSide3 = Math.sqrt((point2X - point3X) * (point2X - point3X)
+                + (point2Y - point3Y) * (point2Y - point3Y));
+        if (triangleSide1 + triangleSide2 <= triangleSide3
+                || triangleSide1 + triangleSide3 <= triangleSide2
+                || triangleSide1 + triangleSide3 <= triangleSide2)
+            System.out.println("Such triangle doesn't exist");
+        else
+        {
+            double halfPerimeter = (triangleSide1 + triangleSide2 + triangleSide3) / 2.0;
+            double square = Math.sqrt(halfPerimeter * (halfPerimeter - triangleSide1)
+                    * (halfPerimeter - triangleSide2) * (halfPerimeter - triangleSide3));
+            System.out.printf("%.2f", square);
+        }
+    }
+
 }

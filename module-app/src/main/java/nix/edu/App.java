@@ -8,5 +8,7 @@ public class App {
         lev1Util.countArrayUniqueDigits(arr);
         System.out.print("Check possibility of horse move: ");
         lev1Util.checkHorseMove(1,1,2,2);
+        System.out.print("Triangle's square: ");
+        lev1Util.findTriangleSquare(1,2,5,1,5,3);
     }
 }
