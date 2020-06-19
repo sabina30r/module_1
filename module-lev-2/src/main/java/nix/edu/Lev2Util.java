@@ -33,6 +33,6 @@ public class Lev2Util {
         }
         System.out.println(result);
     }
-    
+
 
 }
