@@ -7,6 +7,7 @@
     <groupId>nix.edu</groupId>
     <artifactId>module_1</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <modules>
         <module>module-lev-1</module>
