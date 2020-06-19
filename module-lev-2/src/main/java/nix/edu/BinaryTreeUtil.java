@@ -13,7 +13,7 @@ public class BinaryTreeUtil {
 
     TreeNode root;
 
-    int findMaxDepthOfBinaryTree(TreeNode root) {
+    public static int findMaxDepthOfBinaryTree(TreeNode root) {
         if (root == null)
             return 0;
         int leftDepth = findMaxDepthOfBinaryTree(root.left);
