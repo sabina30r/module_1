@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class Lev2Util {
 
-    public static void checkStringWithBrackets(String inputString) {
+    public static String checkStringWithBrackets(String inputString) {
 
         HashMap<String, Integer> openBrackets = new HashMap<String, Integer>() {{
             put("(", 0);
@@ -32,6 +32,7 @@ public class Lev2Util {
             }
         }
         System.out.println(result);
+        return result;
     }
 
 

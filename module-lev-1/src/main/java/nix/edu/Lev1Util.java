@@ -16,15 +16,21 @@ public class Lev1Util {
 
     }
 
-    public void checkHorseMove(int currentRow, int currentColumn, int supposedRow, int supposedColumn){
+    public boolean checkHorseMove(int currentRow, int currentColumn, int supposedRow, int supposedColumn){
+        boolean possibility = true;
        int rowDiff = Math.abs(currentRow - supposedRow);
        int colDiff = Math.abs(currentColumn - supposedColumn);
         if (rowDiff == 1 & colDiff == 2 | rowDiff == 2 & colDiff == 1 )
             System.out.println("It's possible to make move");
-        else System.out.println("It's impossible to make move");
+        else {
+            possibility = false;
+        System.out.println("It's impossible to make move");}
+        return possibility;
     }
 
-    public void findTriangleSquare(double point1X, double point2X, double point3X, double point1Y, double point2Y, double point3Y){
+    public double findTriangleSquare(double point1X, double point2X, double point3X, double point1Y,
+                                     double point2Y, double point3Y){
+        double square = 0;
         double triangleSide1 = Math.sqrt((point1X - point2X) * (point1X - point2X)
                 + (point1Y - point2Y) * (point1Y - point2Y));
         double triangleSide2 = Math.sqrt((point1X - point3X) * (point1X - point3X)
@@ -38,10 +44,11 @@ public class Lev1Util {
         else
         {
             double halfPerimeter = (triangleSide1 + triangleSide2 + triangleSide3) / 2.0;
-            double square = Math.sqrt(halfPerimeter * (halfPerimeter - triangleSide1)
+             square = Math.sqrt(halfPerimeter * (halfPerimeter - triangleSide1)
                     * (halfPerimeter - triangleSide2) * (halfPerimeter - triangleSide3));
             System.out.printf("%.2f", square);
         }
+        return square;
     }
 
 }
